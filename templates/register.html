@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h3 style="color:red">Register yourself first</h3>
+  
+  
+    <form method="POST" action="register">
+      {%csrf_token%}
+      <label>Username:</label>
+      <input type="text" name="username" value=""><br>
+      <label>password:</label><br>
+      <textarea name="password1" ></textarea><br>
+      <label>repeat password:</label><br>
+      <textarea name="password2" ></textarea><br>
+      <input type="submit" name="">
+      
+    </form>
+    {%for message in messages%}
+  {{message}}
+  {% endfor %}
+  </body>
+</html>
